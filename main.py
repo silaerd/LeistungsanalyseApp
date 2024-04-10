@@ -1,45 +1,34 @@
 import json
-from my_functions import build_person, build_experiment
+from my_functions import build_person, build_experiment, estimate_max_hr
 
 def main():
-    # Benutzer nach den erforderlichen Daten für die Versuchsperson fragen
-    first_name = input("Vornamen der Versuchsperson eingeben: ")
-    last_name = input("Nachnamen der Versuchsperson eingeben: ")
-    sex = input("Geschlecht der Versuchsperson eingeben: ")
-    age = int(input("Alter der Versuchsperson eingeben: "))
+    # Benutzer nach den benötigten Daten für die Person fragen
+    first_name = input("Enter first name: ")
+    last_name = input("Enter last name: ")
+    sex = input("Enter sex: ")
+    age = int(input("Enter age: "))
 
-    # Versuchsperson erstellen
-    subject = build_person(first_name, last_name, sex, age)
+    # Benutzer nach den benötigten Daten für das Experiment fragen
+    experiment_name = input("Enter experiment name: ")
+    date = input("Enter date: ")
+    supervisor = input("Enter supervisor name: ")
 
-    # Benutzer nach den erforderlichen Daten für das Experiment fragen
-    experiment_name = input("Namen des Experiments eingeben: ")
-    date = input("Datum des Experiments eingeben: ")
-    supervisor = input("Namen des Supervisors eingeben: ")
+    max_hr = estimate_max_hr(age, sex)
+    print(f"Estimated maximum heart rate: {max_hr} bpm")
 
-    # Experiment erstellen
-    experiment = build_experiment(experiment_name, date, supervisor, subject)
+    # Dictionary für die Person erstellen
+    person_info = build_person(first_name=first_name, last_name=last_name, sex=sex, age=age)
 
-    # Speichern des Experiments in einer Datei
+    # Dictionary für das Experiment erstellen
+    experiment_info = build_experiment(experiment_name=experiment_name, date=date, supervisor=person_info, subject=person_info)
+
+    # Experimenten-Dictionary ausgeben
+    print("Experiment Information:")
+    print(experiment_info)
+
+    # Experimenten-Dictionary in einer Datei speichern
     with open("experiment.json", "w") as outfile:
-        json.dump(experiment, outfile, indent=4)
+        json.dump(experiment_info, outfile)
 
-    # Details der Versuchsperson und des Experiments ausgeben
-    detail_output(subject, experiment)
-
-def detail_output(subject, experiment):
-    # Ausgabe der eingegebenen und gespeicherten Details
-    print("Versuchsperson:")
-    print(f"Vorname: {subject['first_name']}")
-    print(f"Nachname: {subject['last_name']}")
-    if 'sex' in subject:  
-        print(f"Geschlecht: {subject['sex']}")
-    else:
-        print("Geschlecht: Nicht angegeben")  
-    print(f"Alter: {subject['age']}")
-    print("Experiment:")
-    print(f"Name: {experiment['experiment_name']}")
-    print(f"Datum: {experiment['date']}")
-    print(f"Supervisor: {experiment['supervisor']}")
-
-# Hauptprogramm aufrufen
-main()
+if __name__ == "__main__":
+    main()
