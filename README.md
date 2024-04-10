@@ -4,7 +4,7 @@
 
 1. Ordner erstellen
 2. die gegeben Datein: ```my_fuctions``` herunterladen und in den Ordner einfügen
-3. .gitignore Datei erstellen um ünnotige Datein nicht mit hochzuladen
+3. .gitignore Datei erstellen um unnötige Datein nicht mit hochzuladen
 4. virtuelle Umgebung erstellen und benötigte Bibliotheken herunterladen
 5. Hauptprogramm schreiben um den User nach den Daten zu fragen und diese in späterer folge auszuwerten
 
