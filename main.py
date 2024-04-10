@@ -13,8 +13,8 @@ def main():
     date = input("Enter date: ")
     supervisor = input("Enter supervisor name: ")
 
-    max_hr = estimate_max_hr(age, sex)
-    print(f"Estimated maximum heart rate: {max_hr} bpm")
+    max_hr_bpm = estimate_max_hr(age, sex)
+    print("Max Heart Rate (bpm):", max_hr_bpm)
 
     # Dictionary für die Person erstellen
     person_info = build_person(first_name=first_name, last_name=last_name, sex=sex, age=age)
