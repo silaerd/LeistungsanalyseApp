@@ -24,6 +24,8 @@ Für dieses Projekt wird aktuell nur das Json-Modul gebraucht.
 
 ## Funktionsweise des Programms 
 
-Das Hauptprogramm fragt den Benutzer nach den spezifischen Daten zu seinem Probanten, anschließend wird der Benutzer nach einem Namen 
-für das Experiment gefragt und nach seinem eigenen Namen. Diese Daten werden dann mit dem Json Modul in eine Datei gespeichert und kann anschließend vom Benutzer geöffnet werden und zur weiterverabreitung verwendet werden.
+Das Hauptprogramm fragt den Benutzer nach den spezifischen Daten zu seinem Probanten/seiner Probantin, anschließend wird der Benutzer nach einem Namen 
+für das Experiment gefragt und nach seinem/ihrem eigenen Namen. Diese Daten werden dann mit dem Json Modul in eine Datei gespeichert und kann anschließend vom Benutzer geöffnet werden und zur weiterverabreitung verwendet werden.
+
+
 
