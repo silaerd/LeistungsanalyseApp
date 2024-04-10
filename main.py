@@ -23,6 +23,23 @@ def main():
     with open("experiment.json", "w") as outfile:
         json.dump(experiment, outfile, indent=4)
 
+    # Details der Versuchsperson und des Experiments ausgeben
+    detail_output(subject, experiment)
 
-if __name__ == "__main__":
-    main()
+def detail_output(subject, experiment):
+    # Ausgabe der eingegebenen und gespeicherten Details
+    print("Versuchsperson:")
+    print(f"Vorname: {subject['first_name']}")
+    print(f"Nachname: {subject['last_name']}")
+    if 'sex' in subject:  
+        print(f"Geschlecht: {subject['sex']}")
+    else:
+        print("Geschlecht: Nicht angegeben")  
+    print(f"Alter: {subject['age']}")
+    print("Experiment:")
+    print(f"Name: {experiment['experiment_name']}")
+    print(f"Datum: {experiment['date']}")
+    print(f"Supervisor: {experiment['supervisor']}")
+
+# Hauptprogramm aufrufen
+main()
