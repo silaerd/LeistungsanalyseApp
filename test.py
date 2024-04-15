@@ -16,6 +16,7 @@ def test_case_1():
 
     experiment = Experiment(experiment_name, date, supervisor)
     experiment.save("test_experiment.json")
+    return max_hr_bpm
 
 def test_case_2():
     # Testfall 2: Eine andere Person und ein anderes Experiment erstellen und speichern
@@ -33,8 +34,10 @@ def test_case_2():
 
     experiment = Experiment(experiment_name, date, supervisor)
     experiment.save("second_experiment.json")
+    return max_hr_bpm
 
 if __name__ == "__main__":
-    # Führe die Testfälle aus
-    test_case_1()
-    test_case_2()
+    max_hr_person1 = test_case_1()
+    max_hr_person2 = test_case_2()
+    print('Die Maximale Herzfrquenz von Person 1 beträgt:', max_hr_person1)
+    print('Die Maximale Herzfrquenz von Person 1 beträgt:', max_hr_person2)
