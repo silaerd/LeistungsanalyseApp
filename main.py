@@ -21,7 +21,8 @@ def main():
 
     # Dictionary für das Experiment erstellen
     experiment = build_experiment(experiment_name=experiment_name, date=date, supervisor=person_info, subject=person_info)
-    
+
+    # Dictionary für die Experiment-Informationen erstellen
     experiment_info = {
         "experiment_name": experiment_name,
         "date": date,
