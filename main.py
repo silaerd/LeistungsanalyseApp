@@ -33,7 +33,6 @@ def main():
         "sex": sex
         }
 
-
     # Experimenten-Dictionary ausgeben
     print("Experiment Information:")
     print(experiment_info)
