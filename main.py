@@ -25,14 +25,13 @@ def main():
     experiment_info = {
         "experiment_name": experiment_name,
         "date": date,
-        "supervisor": person_info,
-        "subject": {
-            "first_name": first_name,
-            "last_name": last_name,
-            "age": age,
-            "sex": sex
+        "supervisor": supervisor,
+        "first_name": first_name,
+        "last_name": last_name,
+        "age": age,
+        "sex": sex
         }
-    }
+
 
     # Experimenten-Dictionary ausgeben
     print("Experiment Information:")
