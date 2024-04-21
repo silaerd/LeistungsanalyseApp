@@ -36,7 +36,7 @@ def main():
     # Experimenten-Dictionary ausgeben
     print("Experiment Information:", experiment_info)
 
-    # Experimenten-Dictionary in einer Datei speichern
+   
     with open("experiment.json", "w") as outfile:
         json.dump(experiment_info, outfile)
 
