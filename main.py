@@ -1,6 +1,6 @@
+import json
 from my_functions import build_person, build_experiment, estimate_max_hr
 from my_classes import Experiment, Person
-
 def main():
     # Patienten daten anlegen
     first_name = input("Enter Patients first name: ")
@@ -14,7 +14,7 @@ def main():
     supervisor = input("Enter supervisor name: ")
 
     # Berechnung der maximalen Herzfrequenz
-    max_hr_bpm = person.estimate_max_hr()
+    max_hr_bpm = estimate_max_hr(age, sex)
     print("Max Heart Rate (bpm):", max_hr_bpm)
 
     # Dictionary für den Patienten erstellen
@@ -43,7 +43,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
