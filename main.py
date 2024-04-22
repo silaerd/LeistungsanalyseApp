@@ -3,10 +3,10 @@ from my_classes import Experiment, Person
 
 def main():
     # Patienten daten anlegen
-    first_name = input("Enter first name: ")
-    last_name = input("Enter last name: ")
-    sex = input("Enter sex: ")
-    age = int(input("Enter age: "))
+    first_name = input("Enter Patients first name: ")
+    last_name = input("Enter Patients last name: ")
+    sex = input("Enter Patients sex: ")
+    age = int(input("Enter Patients age: "))
 
     # Experimentendaten anlegen
     experiment_name = input("Enter experiment name: ")
@@ -18,10 +18,10 @@ def main():
     print("Max Heart Rate (bpm):", max_hr_bpm)
 
     # Dictionary für den Patienten erstellen
-    person_info = build_person(first_name=first_name, last_name=last_name, sex=sex, age=age)
+    person_info = build_person(first_name = first_name, last_name = last_name, sex = sex, age = age)
 
     # Dictionary für das Experiment erstellen
-    experiment = build_experiment(experiment_name=experiment_name, date=date, supervisor=person_info, subject=person_info)
+    experiment = build_experiment(experiment_name = experiment_name, date = date, supervisor = person_info, subject = person_info)
 
     # Dictionary für die Experiment-Informationen erstellen
     experiment_info = {
@@ -35,7 +35,7 @@ def main():
         }
 
     # Experimenten-Information ausgeben
-    print("Experiment Information:", experiment_info)
+    print("Experimenten Information:", experiment_info)
     
     # Experimenten-Information in einer Datei speichern
     with open("experiment.json", "w") as outfile:
