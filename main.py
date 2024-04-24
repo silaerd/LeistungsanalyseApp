@@ -20,7 +20,7 @@ def main():
     experiment_name = input("Enter experiment name: ")
     date = input("Enter date: ")
     supervisor = input("Enter supervisor name: ")
-    experiment = build_experiment(experiment_name, date, supervisor)
+    experiment = build_experiment(experiment_name, date, supervisor, person)  # person als Argument übergeben
 
     # Dictionary für die Experiment-Informationen erstellen
     experiment_info = {
